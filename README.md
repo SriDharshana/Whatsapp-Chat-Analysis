@@ -6,22 +6,37 @@ The Whatsapp chat analysis pipeline begins with preprocessing raw WhatsApp data,
 
 Multinnomial Naive bayes - Accuracy : 85% , Linear SVC - Accuracy : 80%, NLTK, langdetect, LatentDirichletAllocation, opinion_lexicon, Sentiment Intensity Analyzer
 
+**Topic Modelling**
+
+   - Latent Dirichlet Allocation (LDA) or similar topic modeling techniques are applied to identify latent topics within the chat data.
+   - The text data is vectorized using techniques like TF-IDF (Term Frequency-Inverse Document Frequency) to prepare it for topic modeling.
+   - The number of topics is determined based on domain knowledge or through techniques like grid search.
+     
 # Datasets
 
 Whatsapp chat from any one of the groups can be used as a dataset in Whatchat Analysis Project
+
+# Dataset preprocessing
+
+   - The raw chat data, typically stored in a text file, is loaded into memory using Python's file handling capabilities.
+   - Regular expressions are utilized to parse timestamps and extract user messages from the raw text data.
+   - Media content and URLs are handled separately, with media messages being counted and URLs extracted for further analysis.
+   - Data is organized into a structured format, typically a pandas DataFrame, for further processing.
+   - Textual features such as word frequency, message length, and presence of emojis are extracted from the user messages.
+   - Emojis are detected using regular expressions or specialized libraries like emoji.
+   - Additional features such as the presence of URLs and media messages are also extracted.
+
+
  
 **Original Dataset**
 
+![image](https://github.com/SriDharshana/Whatsapp-Chat-Analysis/assets/86719672/33706976-9df8-4868-aba6-e78443402d29)
 
 
 
 **Preprocessed Dataset**
 
-![image](https://user-images.githubusercontent.com/86719672/210181808-22cbd2b1-5233-47d4-8e69-bd2b8fa6a6a8.png)
 
-**Confusion Matrix**
-
-![image](https://user-images.githubusercontent.com/86719672/210181924-782fc15a-a104-4fef-9a52-fc4f6f0d2326.png)
 
 
 # Prediction
@@ -39,4 +54,23 @@ Sentiment Label: Positive
 Negative Words Detected: []
 
 Positive Words Detected: ['favor', 'thank']
+
+**Count Analysis**
+
+Messages: 13117
+Media: 0
+Emojis: 27310
+Links: 459
+
+**WordCloud**
+
+![image](https://github.com/SriDharshana/Whatsapp-Chat-Analysis/assets/86719672/e58f4585-22b0-4abc-bba3-f08e7f36bebc)
+
+**Message count for each day**
+
+![image](https://github.com/SriDharshana/Whatsapp-Chat-Analysis/assets/86719672/547ff15f-d45e-4dd8-876b-32c9b03077a5)
+
+
+
+
 
