@@ -3,7 +3,7 @@ A comprehensive analysis tool for WhatsApp chat data leveraging Python libraries
 
 The Whatsapp chat analysis pipeline begins with preprocessing raw WhatsApp data, including message extraction, user identification, and timestamp parsing. Employed regular expressions for efficient text parsing and NLTK for advanced text processing tasks such as sentiment analysis, emoji detection, and word frequency analysis. Additionally, used utilize word clouds to visualize word frequencies and identify prominent themes within the chat corpus
 
-NLTK, langdetect, LatentDirichletAllocation, opinion_lexicon, Sentiment Intensity Analyzer, stopwords, count vectorizer were used
+NLTK, langdetect, LatentDirichletAllocation, opinion_lexicon, Sentiment Intensity Analyzer, stopwords, emoji count vectorizer were used
 
 **Topic Modelling**
 
@@ -35,6 +35,46 @@ Whatsapp chat from any one of the groups can be used as a dataset in Whatchat An
 
 **Preprocessed Dataset**
 
+                date_time                        user  \
+0     2020-01-26 16:19:00          group_notification   
+1     2020-01-24 20:25:00          group_notification   
+2     2020-01-26 16:19:00          group_notification   
+3     2020-01-26 16:20:00          group_notification   
+4     2020-01-26 16:20:00          group_notification   
+...                   ...                         ...   
+13650 2020-10-02 02:05:00   Darshan Rander (TSEC, IT)   
+13651 2020-10-02 02:05:00   Darshan Rander (TSEC, IT)   
+13652 2020-10-02 02:11:00     Tanay Kamath (TSEC, CS)   
+13653 2020-10-02 02:28:00   Darshan Rander (TSEC, IT)   
+13654 2020-10-02 10:13:00  Dheeraj Lalwani (TSEC, CS)  
+
+                                                 message              emoji  \
+0      Messages and calls are end-to-end encrypted. N...            (0, [])   
+1      Tanay Kamath (TSEC, CS) created group "CODERS👨...  (3, [👨, 💻👩, 💻🖥💻])   
+2             You joined using this group's invite link             (0, [])   
+3      +91 99871 38558 joined using this group's invi...            (0, [])   
+4      +91 91680 38866 joined using this group's invi...            (0, [])   
+...                                                  ...                ...   
+13650                                    MCQs mark kiya             (0, [])   
+13651                                    Sign-in kiya😂😅           (1, [😂😅])   
+13652                                  Incognito se na?             (0, [])   
+13653                                               Yup             (0, [])   
+13654  guys, please do me a favor and vote in this po...            (0, [])   
+
+       urlcount  day month  year        date  
+0             0  Sun   Jan  2020  2020-01-26  
+1             0  Fri   Jan  2020  2020-01-24  
+2             0  Sun   Jan  2020  2020-01-26  
+3             0  Sun   Jan  2020  2020-01-26  
+4             0  Sun   Jan  2020  2020-01-26  
+...         ...  ...   ...   ...         ...  
+13650         0  Fri   Oct  2020  2020-10-02  
+13651         0  Fri   Oct  2020  2020-10-02  
+13652         0  Fri   Oct  2020  2020-10-02  
+13653         0  Fri   Oct  2020  2020-10-02  
+13654         1  Fri   Oct  2020  2020-10-02  
+
+[13655 rows x 9 columns]
 
 
 
