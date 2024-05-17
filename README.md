@@ -1,10 +1,9 @@
 # Whatsapp-Chat-Analysis
 A comprehensive analysis tool for WhatsApp chat data leveraging Python libraries and natural language processing techniques is presented. The application is developed using Streamlit, a user-friendly web framework, to provide an interactive and visually appealing interface for exploring various aspects of chat conversations. 
 
-# Model and Libraries used
 The Whatsapp chat analysis pipeline begins with preprocessing raw WhatsApp data, including message extraction, user identification, and timestamp parsing. Employed regular expressions for efficient text parsing and NLTK for advanced text processing tasks such as sentiment analysis, emoji detection, and word frequency analysis. Additionally, used utilize word clouds to visualize word frequencies and identify prominent themes within the chat corpus
 
-Multinnomial Naive bayes - Accuracy : 85% , Linear SVC - Accuracy : 80%, NLTK, langdetect, LatentDirichletAllocation, opinion_lexicon, Sentiment Intensity Analyzer
+NLTK, langdetect, LatentDirichletAllocation, opinion_lexicon, Sentiment Intensity Analyzer, stopwords, count vectorizer were used
 
 **Topic Modelling**
 
